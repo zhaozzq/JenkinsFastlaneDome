@@ -88,6 +88,8 @@ platform :ios do
 
     print "oldbuild: #{oldbuild}\n newbuild: #{newbuild}\n version: #{version}"
 
+    commit_version_bump(message: 'Bump version', force: true)
+
     gym(
       scheme: "#{scheme}", 
       output_directory: "../build/#{scheme}/#{date}",
@@ -99,6 +101,10 @@ platform :ios do
     )
     # deliver(force: true)
     # frameit
+
+    push_to_git_remote(remote: 'origin', local_branch: 'release', remote_branch: 'release', force: false)
+
+    clean_build_artifacts
   end
 
   # You can define as many lanes as you want
