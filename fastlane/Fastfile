@@ -52,6 +52,8 @@ platform :ios do
 
     print " oldbuild: #{oldbuild}\n newbuild: #{newbuild}\n version: #{version}\n"
 
+    commit_version_bump(message: "Bump build version #{newbuild}", force: true)
+
     gym(
       scheme: "JenkinsFastlane", 
       output_directory: "../build/#{scheme}/#{date}",
@@ -68,6 +70,11 @@ platform :ios do
 
     # sh "your_script.sh"
     # You can also use other beta testing services here (run `fastlane actions`)
+
+    push_to_git_remote(remote: 'origin', local_branch: 'master', remote_branch: 'master', force: false)
+
+    clean_build_artifacts
+
   end
 
   desc "Deploy a new version to the App Store"
