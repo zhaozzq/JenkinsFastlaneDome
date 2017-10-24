@@ -18,7 +18,9 @@ default_platform :ios
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    ensure_git_status_clean
+    
+    # ensure_git_status_clean
+
     ENV['DEVELOPER_DIR'] = '/Applications/Xcode-beta.app/Contents/Developer'
 
     cocoapods
@@ -37,7 +39,9 @@ platform :ios do
     #cert
     #sigh
 
-    
+    notes = changelog_from_git_commits
+
+    print "changelog_from_git_commits: #{notes}"
 
     scheme = options[:scheme]
     date = Time.new.strftime("%Y%m%d-%H%M")
