@@ -102,7 +102,7 @@ platform :ios do
     # deliver(force: true)
     # frameit
 
-    push_to_git_remote(remote: 'origin', local_branch: 'release', remote_branch: 'release', force: false)
+    push_to_git_remote(remote: 'origin', local_branch: 'master', remote_branch: 'master', force: false)
 
     clean_build_artifacts
   end
