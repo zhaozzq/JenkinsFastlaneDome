@@ -29,12 +29,20 @@
                                 <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Trigger again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1n-8e-WDf">
+                                <rect key="frame" x="119.5" y="435" width="137" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kP0-Yd-lhe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5k5-S0-YKN"/>
                             <constraint firstItem="d0s-iT-Ji7" firstAttribute="centerX" secondItem="kP0-Yd-lhe" secondAttribute="centerX" id="9Qs-sK-Acw"/>
                             <constraint firstItem="d0s-iT-Ji7" firstAttribute="top" secondItem="kP0-Yd-lhe" secondAttribute="bottom" constant="44.5" id="PHM-Da-DTo"/>
+                            <constraint firstItem="f1n-8e-WDf" firstAttribute="centerX" secondItem="d0s-iT-Ji7" secondAttribute="centerX" id="hX4-u4-sZl"/>
+                            <constraint firstItem="f1n-8e-WDf" firstAttribute="top" secondItem="d0s-iT-Ji7" secondAttribute="bottom" constant="15" id="ibV-qG-LQe"/>
                             <constraint firstItem="kP0-Yd-lhe" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ltU-eT-kh4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
