@@ -19,6 +19,7 @@ platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
     ENV['DEVELOPER_DIR'] = '/Applications/Xcode-beta.app/Contents/Developer'
+
     cocoapods
     
   end
@@ -34,9 +35,22 @@ platform :ios do
     # match(type: "appstore") # more information: https://codesigning.guide
     #cert
     #sigh
+
+    ensure_git_status_clean
+
     scheme = options[:scheme]
     date = Time.new.strftime("%Y%m%d-%H%M")
+
+    oldbuild = get_build_number()
+
     increment_build_number
+
+    newbuild = get_build_number()
+
+    version = get_version_number()
+
+    print "oldbuild: #{oldbuild}\n newbuild: #{newbuild}\n version: #{version}"
+
     gym(
       scheme: "JenkinsFastlane", 
       output_directory: "../build/#{scheme}/#{date}",
@@ -62,7 +76,17 @@ platform :ios do
 
     scheme = options[:scheme]
     date = Time.new.strftime("%Y%m%d-%H%M")
+
+    oldbuild = get_build_number()
+
     increment_build_number
+
+    newbuild = get_build_number()
+
+    version = get_version_number()
+
+    print "oldbuild: #{oldbuild}\n newbuild: #{newbuild}\n version: #{version}"
+
     gym(
       scheme: "#{scheme}", 
       output_directory: "../build/#{scheme}/#{date}",
