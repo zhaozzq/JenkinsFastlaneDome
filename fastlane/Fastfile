@@ -54,7 +54,7 @@ platform :ios do
     #sigh
 
     scheme = options[:scheme]
-    
+
     date = Time.new.strftime("%Y%m%d-%H%M")
 
     oldbuild = get_build_number()
@@ -149,7 +149,6 @@ platform :ios do
       message: exception.message,
       success: false,
       channel: "#general",
-      # slack_url: "https://hooks.slack.com/services/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"
     )
   end
 
