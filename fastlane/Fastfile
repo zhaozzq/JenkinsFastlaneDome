@@ -80,13 +80,13 @@ platform :ios do
     )    
 
     # sh "open ../../build/#{scheme}/#{date}"
-    sh "open ."
+    sh "cd .."
     #pilot
 
     # sh "your_script.sh"
     # You can also use other beta testing services here (run `fastlane actions`)
 
-    # push_to_git_remote(remote: 'origin', local_branch: 'master', remote_branch: 'master', force: false)
+    push_to_git_remote(remote: 'origin', local_branch: 'master', remote_branch: 'master', force: false)
 
     #hg_push
 
