@@ -25,11 +25,11 @@ platform :ios do
 
     print "changelog_from_git_commits: #{notes}"
 
-    lastnote = notes[0, 4]
+    lastnote = notes[0, 19]
 
     print "lastnote: #{lastnote}\n"
 
-    if lastnote == 'Bump' 
+    if lastnote == 'Build via Fastlane!' 
     	# next
     	UI.user_error!("Skip this commit: #{notes}")
     end
@@ -66,7 +66,7 @@ platform :ios do
 
     print " oldbuild: #{oldbuild}\n newbuild: #{newbuild}\n version: #{version}\n"
 
-    commit_version_bump(message: "Bump build version #{newbuild}", force: true)
+    commit_version_bump(message: "Build via Fastlane! build version #{newbuild}", force: true)
 
     gym(
       scheme: "JenkinsFastlane", 
