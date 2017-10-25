@@ -18,7 +18,7 @@ default_platform :ios
 platform :ios do
   before_all do
 
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
     
     ensure_git_status_clean
 
@@ -140,7 +140,7 @@ platform :ios do
     slack(
       message: "Successfully deployed new App Update.",
       channel: "#general",
-      slack_url: "https://hooks.slack.com/services/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"
+      # slack_url: "https://hooks.slack.com/services/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"
     )
   end
 
@@ -149,7 +149,7 @@ platform :ios do
       message: exception.message,
       success: false,
       channel: "#general",
-      slack_url: "https://hooks.slack.com/services/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"
+      # slack_url: "https://hooks.slack.com/services/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"
     )
   end
 
