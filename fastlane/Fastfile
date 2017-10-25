@@ -17,7 +17,7 @@ default_platform :ios
 
 platform :ios do
   before_all do
-  	
+
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
     
     ensure_git_status_clean
@@ -88,6 +88,8 @@ platform :ios do
 
     push_to_git_remote(remote: 'origin', local_branch: 'master', remote_branch: 'master', force: false)
 
+    # hg_push
+    
     clean_build_artifacts
 
   end
