@@ -54,6 +54,7 @@ platform :ios do
     #sigh
 
     scheme = options[:scheme]
+    
     date = Time.new.strftime("%Y%m%d-%H%M")
 
     oldbuild = get_build_number()
