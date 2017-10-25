@@ -80,7 +80,7 @@ platform :ios do
     )    
 
     # sh "open ../../build/#{scheme}/#{date}"
-
+    sh "open ."
     #pilot
 
     # sh "your_script.sh"
@@ -88,7 +88,7 @@ platform :ios do
 
     # push_to_git_remote(remote: 'origin', local_branch: 'master', remote_branch: 'master', force: false)
 
-    hg_push
+    #hg_push
 
     #clean_build_artifacts
 
