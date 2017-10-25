@@ -79,7 +79,7 @@ platform :ios do
       export_method:'app-store',
     )    
 
-    sh "open ../../build/#{scheme}/#{date}"
+    # sh "open ../../build/#{scheme}/#{date}"
 
     #pilot
 
