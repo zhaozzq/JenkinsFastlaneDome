@@ -89,8 +89,8 @@ platform :ios do
     push_to_git_remote(remote: 'origin', local_branch: 'master', remote_branch: 'master', force: false)
 
     # hg_push
-    
-    clean_build_artifacts
+
+    #clean_build_artifacts
 
   end
 
