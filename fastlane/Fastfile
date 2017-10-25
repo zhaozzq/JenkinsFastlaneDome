@@ -80,7 +80,7 @@ platform :ios do
     )    
 
     # sh "open ../../build/#{scheme}/#{date}"
-    sh "cd .."
+
     #pilot
 
     # sh "your_script.sh"
